@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://crpswovffikm3"]
+
+[ext_resource type="Script" path="res://scenes/App.gd" id="1_hn3br"]
+
+[node name="App" type="Node"]
+script = ExtResource("1_hn3br")
+
+[node name="SceneHost" type="Node" parent="."]
