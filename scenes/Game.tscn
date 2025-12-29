@@ -50,5 +50,67 @@ text = "Resume"
 layout_mode = 2
 text = "Main Menu"
 
+[node name="HUD" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBox" type="VBoxContainer" parent="CanvasLayer/HUD"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -73.0
+offset_top = -139.5
+offset_right = 73.0
+offset_bottom = 139.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ClickPowerLabel" type="Label" parent="CanvasLayer/HUD/VBox"]
+layout_mode = 2
+
+[node name="MoneyLabel" type="Label" parent="CanvasLayer/HUD/VBox"]
+layout_mode = 2
+
+[node name="PhaseLabel" type="Label" parent="CanvasLayer/HUD/VBox"]
+layout_mode = 2
+
+[node name="ShaftLabel" type="Label" parent="CanvasLayer/HUD/VBox"]
+layout_mode = 2
+
+[node name="RockLabel" type="Label" parent="CanvasLayer/HUD/VBox"]
+layout_mode = 2
+
+[node name="WorkButton" type="Button" parent="CanvasLayer/HUD/VBox"]
+layout_mode = 2
+text = "Work"
+
+[node name="PickaxeButton" type="Button" parent="CanvasLayer/HUD/VBox"]
+layout_mode = 2
+text = "Buy Pickaxe"
+
+[node name="NewShaftButton" type="Button" parent="CanvasLayer/HUD/VBox"]
+layout_mode = 2
+text = "Create Shaft (100)"
+
+[node name="MineButton" type="Button" parent="CanvasLayer/HUD/VBox"]
+layout_mode = 2
+text = "Mine"
+
+[node name="WorkerButton" type="Button" parent="CanvasLayer/HUD/VBox"]
+layout_mode = 2
+text = "Hire Worker"
+
 [connection signal="pressed" from="CanvasLayer/PauseOverlay/Panel/VBoxContainer/ResumeButton" to="." method="_on_resume_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/PauseOverlay/Panel/VBoxContainer/MainMenuButton" to="." method="_on_main_menu_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/HUD/VBox/WorkButton" to="." method="_on_work_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/HUD/VBox/PickaxeButton" to="." method="_on_pickaxe_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/HUD/VBox/NewShaftButton" to="." method="_on_new_shaft_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/HUD/VBox/MineButton" to="." method="_on_mine_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/HUD/VBox/WorkerButton" to="." method="_on_worker_button_pressed"]
